@@ -87,4 +87,59 @@
 #         return answer
 
 
+# todo 459
+# https://leetcode.com/submissions/detail/1546634932/
+# class Solution:
+#     def repeatedSubstringPattern(self, s: str) -> bool:
+#         return s in (s + s)[1:-1]
 
+
+
+# todo 482
+# https://leetcode.com/problems/license-key-formatting/description/
+
+# class Solution:
+#     def licenseKeyFormatting(self, s: str, k: int) -> str:
+#         string = s.replace('-', '').upper()
+#         mod = len(string) % k
+#         parts = []
+#         if mod > 0:
+#             parts.append(string[:mod])
+#         for i in range(mod, len(string), k):
+#             parts.append(string[i:i + k])
+#         return '-'.join(parts)
+
+
+
+# todo 521
+# https://leetcode.com/problems/longest-uncommon-subsequence-i/
+# class Solution:
+#     def findLUSlength(self, a: str, b: str) -> int:
+#         if a==b :
+#             return -1
+#         else:
+#             return max(len(a), len(b))
+
+
+
+# todo 557
+# https://leetcode.com/problems/reverse-words-in-a-string-iii/description/
+# class Solution:
+#     def reverseWords(self, s: str) -> str:
+#         return ' '.join(map(lambda word: word[::-1], s.split()))
+
+
+# todo 599
+# https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/
+# class Solution:
+#     def findRestaurant(self, list1: List[str], list2: List[str]) -> List[str]:
+#         index_sum = inf
+#         list3 = set(list2)
+#         for i, word in enumerate(list1):
+#             if word in list3:
+#                 if (i_sum := i + list2.index(word)) < index_sum:
+#                     result = [word]
+#                     index_sum = i_sum
+#                 elif i_sum == index_sum:
+#                     result.append(word)
+#         return result
