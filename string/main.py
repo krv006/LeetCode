@@ -143,3 +143,54 @@
 #                 elif i_sum == index_sum:
 #                     result.append(word)
 #         return result
+
+
+# todo 38
+# https://leetcode.com/problems/count-and-say/description/
+# class Solution:
+#     def countAndSay(self, n: int) -> str:
+#         curr = "1"
+#
+#         for _ in range(n - 1):
+#             j = k = 0
+#             next_str = ""
+#             while j < len(curr):
+#                 while k < len(curr) and curr[j] == curr[k]:
+#                     k += 1
+#                 next_str += str(k - j) + curr[j]
+#                 j = k
+#             curr = next_str
+#
+#         return curr
+
+# todo 22
+# https://leetcode.com/problems/generate-parentheses/description/
+# class Solution:
+#     def generateParenthesis(self, n: int) -> List[str]:
+#         res = []
+#
+#         def backtrack(s="", open=0, close=0):
+#             if len(s) == 2 * n:
+#                 res.append(s)
+#                 return
+#             if open < n:
+#                 backtrack(s + "(", open + 1, close)
+#             if close < open:
+#                 backtrack(s + ")", open, close + 1)
+#
+#         backtrack()
+#         return res
+
+
+# todo 17
+# https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+# class Solution:
+#     def letterCombinations(self, digits: str) -> List[str]:
+#         if not digits:
+#             return []
+#         digit_to_chars = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+#         combinations = ['']
+#         for digit in digits:
+#             letters = digit_to_chars[int(digit) - 2]
+#             combinations = [prefix + letter for prefix in combinations for letter in letters]
+#         return combinations
