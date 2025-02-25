@@ -194,3 +194,62 @@
 #             letters = digit_to_chars[int(digit) - 2]
 #             combinations = [prefix + letter for prefix in combinations for letter in letters]
 #         return combinations
+
+
+# todo 657
+# https://leetcode.com/problems/robot-return-to-origin/
+# class Solution:
+#     def judgeCircle(self, moves: str) -> bool:
+#         x, y = 0, 0
+#
+#         for move in moves:
+#             if move == 'R':
+#                 x += 1
+#             elif move == 'L':
+#                 x -= 1
+#             elif move == 'U':
+#                 y += 1
+#             elif move == 'D':
+#                 y -= 1
+#
+#         return x == 0 and y == 0
+
+# result = [0, 0]
+# for move in moves:
+#     if move == "U":
+#         result[0] += 1
+#     elif move == "D":
+#         result[0] -= 1
+#     elif move == "R":
+#         result[1] += 1
+#     elif move == "L":
+#         result[1] -= 1
+#
+# return result == [0, 0]
+
+
+# todo 680
+# https://leetcode.com/problems/valid-palindrome-ii/submissions/1554899849/
+# class Solution:
+#     def validPalindrome(self, s: str) -> bool:
+#         def is_palindrome(substring: str, left: int, right: int) -> bool:
+#             while left < right:
+#                 if substring[left] != substring[right]:
+#                     return False
+#                 left += 1
+#                 right -= 1
+#             return True
+#
+#         left, right = 0, len(s) - 1
+#         while left < right:
+#             if s[left] != s[right]:
+#                 return is_palindrome(s, left + 1, right) or is_palindrome(s, left, right - 1)
+#             left += 1
+#             right -= 1
+#
+#         return True
+#         # yordam soradim
+
+
+# todo 696
+# https://leetcode.com/problems/count-binary-substrings/description/
