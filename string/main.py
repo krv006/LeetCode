@@ -253,3 +253,38 @@
 
 # todo 696
 # https://leetcode.com/problems/count-binary-substrings/description/
+# class Solution:
+#     def countBinarySubstrings(self, s: str) -> int:
+#         count = 1
+#         arr = []
+#         for i in range(1,len(s)) :
+#             if s[i] == s[i-1] :
+#                 count += 1
+#             else :
+#                 arr.append(count)
+#                 count = 1
+#         arr.append(count)
+#         count = 0
+#         for i in range(1,len(arr)) :
+#             count += min(arr[i],arr[i-1])
+#         return count
+
+
+# todo 748
+# https://leetcode.com/problems/shortest-completing-word/description/
+# class Solution:
+#     def shortestCompletingWord(self, licensePlate: str, words: List[str]) -> str:
+#         f=collections.Counter()
+#         for c in licensePlate.lower():
+#             if c.isalpha():
+#                 f[c]+=1
+#         shortest="z"*20
+#         for word in words:
+#             wf=collections.Counter(word)
+#
+#             if (f&wf)==f:
+#                 if len(word)<len(shortest):
+#                     shortest=word
+#         return shortest
+
+
