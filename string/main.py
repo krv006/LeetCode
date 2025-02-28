@@ -94,7 +94,6 @@
 #         return s in (s + s)[1:-1]
 
 
-
 # todo 482
 # https://leetcode.com/problems/license-key-formatting/description/
 
@@ -110,7 +109,6 @@
 #         return '-'.join(parts)
 
 
-
 # todo 521
 # https://leetcode.com/problems/longest-uncommon-subsequence-i/
 # class Solution:
@@ -119,7 +117,6 @@
 #             return -1
 #         else:
 #             return max(len(a), len(b))
-
 
 
 # todo 557
@@ -288,3 +285,21 @@
 #         return shortest
 
 
+# todo 796
+# https://leetcode.com/problems/rotate-string/description/
+# class Solution:
+#     def rotateString(self, s: str, goal: str) -> bool:
+#         return len(s) == len(goal) and goal in s+s
+
+
+# todo 771
+# https://leetcode.com/problems/jewels-and-stones/description/
+# class Solution:
+#     def numJewelsInStones(self, jewels: str, stones: str) -> int:
+#         count = 0 #brute force approach
+#
+#         for stone in stones:
+#             if stone in jewels:
+#                 count += 1
+#
+#         return count
