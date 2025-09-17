@@ -1,3 +1,4 @@
+
 # todo 257
 # def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
 #     res = []
